@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat:wght@300;400&family=Orbitron:wght@500&display=swap");
+
+* {
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.PostArea::-webkit-scrollbar {
+  width: 0.8rem;
+}
+.PostArea::-webkit-scrollbar-track {
+  background: #181818;
+}
+.PostArea::-webkit-scrollbar-thumb {
+  background: #424242;
+}
+
+body {
+  background-color: #181818;
+  color: #ffffff;
+}
+
+.MainGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1.5fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Title PostArea FriendBox"
+    "BeTweetTimer PostArea FriendBox"
+    "UserTweetForm PostArea QuickAddFriendBox"
+    "AccountBox PostArea QuickAddFriendBox";
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.PostArea {
+  background: #252525;
+  border: 1px solid rgba(215, 215, 215, 0.34);
+  border-radius: 4px;
+  height: 100%;
+  width: 100%;
+  grid-area: PostArea;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-height: 100vh;
+}
+.post{
+  padding: 0.5vh;
+}
+.post > .postUser{
+  font-size: 1.1vw;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+.postContent{
+  font-size: 0.9vw;
+}
+
+.Title {
+  grid-area: Title;
+  font-family: "Kanit";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vw;
+  line-height: 78px;
+}
+
+.SubTitle {
+  font-size: 1.3vw;
+  padding-bottom: 5px;
+}
+
+.FriendBox {
+  grid-area: FriendBox;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.FriendBoxList {
+  background: #424242;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 23vw;
+  height: 50vh;
+}
+
+.QuickAddFriendBox {
+  grid-area: QuickAddFriendBox;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.QuickAddFriendBoxList {
+  background: #424242;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  width: 23vw;
+  height: 36.5vh;
+}
+.QuickAddFriendBoxTitle {
+  font-size: 1.3vw;
+}
+
+.BeTweetTimer {
+  grid-area: BeTweetTimer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#Timer {
+  font-family: "Orbitron";
+  font-size: 3vw;
+}
+
+.UserTweetForm {
+  grid-area: UserTweetForm;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.UserTweetFormInput {
+  background: #424242;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  width: 22vw;
+  height: 15vh;
+}
+.UserTweetFormButton {
+  background: #424242;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  width: 10vw;
+  cursor: pointer;
+}
+
+.AccountBox {
+  grid-area: AccountBox;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
