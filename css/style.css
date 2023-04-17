@@ -54,7 +54,7 @@ body {
   max-height: 100vh;
 }
 .post{
-  padding: 0.5vh;
+  padding: 0.9vh;
 }
 .post > .postUser{
   font-size: 1.1vw;
@@ -72,6 +72,7 @@ body {
   font-weight: 400;
   font-size: 3vw;
   line-height: 78px;
+  padding: 0.5vw;
 }
 
 .SubTitle {
@@ -128,20 +129,20 @@ body {
   font-size: 3vw;
 }
 
-.UserTweetForm {
+#UserTweetForm {
   grid-area: UserTweetForm;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.UserTweetFormInput {
+#UserTweetFormInput {
   background: #424242;
   border: 1px solid #000000;
   border-radius: 10px;
   width: 22vw;
   height: 15vh;
 }
-.UserTweetFormButton {
+#UserTweetFormButton {
   background: #424242;
   border: 1px solid #000000;
   border-radius: 10px;
